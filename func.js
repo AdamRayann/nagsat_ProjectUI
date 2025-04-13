@@ -1,3 +1,4 @@
+const baseURI = "https://nagsat-project.onrender.com/";
 function submitQuestion(qNum) {
     const questionBlock = document.getElementById(`question-block${qNum}`);
   const question = questionBlock.getAttribute('data-question');
@@ -9,7 +10,7 @@ function submitQuestion(qNum) {
       return;
     }
   
-    fetch('http://localhost:5000/api/v1/0', {
+    fetch('${baseURI}api/v1/0', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
