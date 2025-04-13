@@ -10,7 +10,7 @@ function submitQuestion(qNum) {
       return;
     }
   
-    fetch('${baseURI}api/v1/0', {
+    fetch(`${baseURI}api/v1/0`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
